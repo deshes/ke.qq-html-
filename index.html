@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <title>Document</title>
+    <style media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pic-box{
+            width: 10rem;
+            background-color: red;
+            height: 3.9333rem;
+            background: url(http://p.qpic.cn/qqconadmin/0/52e43523d33842ad876ae59b784daab8/0) no-repeat red;
+            -webkit-background-size: contain;
+            background-size: contain;
+            margin-top: 1.2rem;
+            position: relative;
+        }
+        .dots-box li{
+            display: inline-block;
+            border-radius: 50%;
+            width: 0.186667rem;
+            height: 7px;
+            background-color: #fff;
+            opacity: .5;
+            margin-right: 0.1333333rem;
+            font-size: 0;
+            transition: opacity: .3s;
+        }
+        .dots-box{
+            position: absolute;
+            left: 50% ;
+            transform: translateX(-50%);
+            bottom: .266667rem;
+            margin-right: 0;
+            height: 0.18667rem;
+            width: 1.6rem;
+        }
+        .dots-box li.on{
+            background-color: #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic-box">
+        <ul class="dots-box">
+            <li class="on"></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
+<script type="text/javascript">
+// var oLis = document.querySelectorAll(".dots-box li");
+// var oCurrentLi = document.querySelector(".dots-box .on");
+// var i = 0;
+// setInterval(function(){
+//   document.querySelector(".dots-box .on").classList.remove("on");
+//   oLis[i].classList.add("on");
+//   i++;
+//   if(i >= oLis.length){
+//     i = 0;
+//   }
+// },200);
+
+    var lis=document.querySelectorAll(".dots-box li");
+    var lisCurrent=document.querySelector(".dots-box .on");
+    console.log(lisCurrent);
+    var i=0;
+    setInterval(function(){
+        document.querySelector(".dots-box .on").classList.remove("on");
+        lis[i].classList.add("on");
+        i++;
+        if(i>=lis.length){
+            i=0;
+        }
+    },200);
+</script>
+</body>
+</html>
